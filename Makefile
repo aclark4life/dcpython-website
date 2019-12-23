@@ -326,5 +326,9 @@ vm: vagrant-init  # Alias
 
 #PROJECT = project
 #APP = app
-.DEFAULT_GOAL=commit-push
+.DEFAULT_GOAL=deploy
 #install: pip-install
+
+deploy:
+	$(MAKE) commit-push
+	aws --profile=dc s3 cp --recursive . s3://dcpython.org
