@@ -331,4 +331,4 @@ vm: vagrant-init  # Alias
 
 deploy:
 	$(MAKE) commit-push
-	aws --profile=dc s3 sync --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers . s3://dcpython.org --exclude ".git/*" --exclude Makefile
+	aws --profile=dc s3 --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers sync . s3://dcpython.org --exclude ".git/*" --exclude Makefile
