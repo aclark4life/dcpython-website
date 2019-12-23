@@ -331,4 +331,4 @@ vm: vagrant-init  # Alias
 
 deploy:
 	$(MAKE) commit-push
-	aws --profile=dc s3 sync --recursive . s3://dcpython.org --exclude ".git/*"
+	aws --profile=dc s3 sync . s3://dcpython.org --exclude ".git/*"
