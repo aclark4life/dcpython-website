@@ -282,6 +282,8 @@ freeze: pip-freeze  # Alias
 python-serve:
 	@echo "\n\tServing HTTP on http://0.0.0.0:8000\n"
 	python -m http.server
+python-virtualenv-2-6:
+	virtualenv --python=python2.6 .
 python-virtualenv-2-7:
 	virtualenv --python=python2.7 .
 python-virtualenv-3-7:
@@ -326,10 +328,5 @@ vm: vagrant-init  # Alias
 
 #PROJECT = project
 #APP = app
-.DEFAULT_GOAL=deploy
+.DEFAULT_GOAL=commit-push
 #install: pip-install
-
-deploy:
-	$(MAKE) commit-push
-	aws --profile=dc s3 cp --recursive . s3://dcpython.org --exclude ".git/*" --exclude Makefile --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
-	aws --profile=dc cloudfront create-invalidation --distribution-id E315Y1FCSR1NT1 --paths "/*"
