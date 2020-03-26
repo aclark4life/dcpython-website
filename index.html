@@ -29,6 +29,9 @@
 <div class="container p-5">
 
 
+
+
+
 <nav class="navbar navbar-light navbar-expand-md text-uppercase app-navbar mb-5 fixed-top bg-light">
   <a class="navbar-brand mr-auto" href="../">
     <span><img class="p-3" width="250" src="../assets/img/python-logo-dc.png"></span>
@@ -48,15 +51,19 @@
       <li class="nav-item btn btn-warning">
         <a class="nav-link" href="#donate">Donate</a>
       </li>
-      <li class="nav-item px-1 dropdown"><!-- https://stackoverflow.com/a/29668214/185820 -->
-         <a class="nav-link" href="#about" id="navbarDropdown" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
-           About
-         </a>
-         <div class="dropdown-menu text-capitalize" aria-labelledby="navbarDropdown">
-           <a class="nav-link" href="../minimal/index.html">Minimal</a>
-         </div>
+      <li class="nav-item">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="../minimal/index.html">Minimal</a>
       </li>
       <li class="nav-item ">
