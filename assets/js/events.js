@@ -36,7 +36,7 @@ $(document).ready(function() {
 		var s = "";
 		for(var i=0;i<res.length; i++) {
 			var group = res[i];
-			s += "<h2>"+(i+1)+" <a href='"+group.link+"'>"+group.name+"</a></h2>";
+			s += "<h2>"+(i+1)+" <a target='_blank' href='"+group.link+"'>"+group.name+"</a></h2>";
 			if(group.group_photo && group.group_photo.thumb_link) {
 				s += "<img src=\"" + group.group_photo.thumb_link + "\" align=\"left\">";
 			}
