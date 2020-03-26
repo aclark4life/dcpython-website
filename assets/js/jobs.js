@@ -25,11 +25,11 @@ function fetchGroups(url, cb, data) {
 
 $(document).ready(function() {
 	
-	var $results = $("#events");
+	var $results = $("#joblistings");
 
 	$results.html("<p>Finding meetups with Ionic in the description.</p>");
 
-	fetchGroups("https://api.meetup.com/dcpython/events?&sign=true&photo-host=public&page=20", function(res) {
+	fetchGroups("https://api.meetup.com/dcpython/boards/617991/discussions?&sign=true&photo-host=public&page=20", function(res) {
 		console.log("totally done");
 		console.dir(res);	
 
