@@ -1,0 +1,5 @@
+The DC Python Meetup is brought to you by ZPUGDC, Inc. (DBA DC Python), a 501 (c) 3 non-profit organization that promotes and supports the research, development and use of Python software in DC, Maryland and Virginia. We facilitate the education of all Python users by organizing and hosting frequent instructional events to foster and promote academic research, development and learning as well as professional growth and networking.
+
+For more information about DC Python, please see:
+
+• https://dcpython.org
