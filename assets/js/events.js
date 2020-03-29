@@ -34,13 +34,9 @@ $(document).ready(function() {
         console.dir(res);
 
         var s = "";
-        for (var i = 0; i < res.length; i++) {
-            var group = res[i];
-            s += "<h2>" + (i + 1) + " <a target='_blank' href='" + group.link + "'>" + group.name + "</a></h2>";
-            if (group.group_photo && group.group_photo.thumb_link) {
-                s += "<img src=\"" + group.group_photo.thumb_link + "\" align=\"left\">";
-            }
-            s += "<p>Location: " + group.city + ", " + group.state + " " + group.country + "</p><br clear=\"left\">";
+        for (var i = 0; i < 3; i++) {
+            var ev = res[i];
+            s += "<div class='card border my-5'><div class='card-header'><h2 class='card-title'>" + ev.name + "</h2></div><div class='card-body text-left'><p class='card-text'>" + ev.description + "</p></div> <a target='_blank' href='" + ev.link + "' class='btn btn-primary'>Go somewhere</a> </div> </div>";
         }
         $results.html(s);
 
