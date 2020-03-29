@@ -33,7 +33,7 @@ $(document).ready(function() {
         var s = "";
         for (var i = 0; i < 3; i++) {
             var ev = res[i];
-            s += "<div class='card border rounded my-5 text-left'> <div class='card-header'> " + ev.name + "</div> <div class='card-body'> <h5 class='card-title'>" + ev.local_date + "</h5> <p class='card-text'>" + ev.description + "</p> <a target='_blank' href='" + ev.link + "' class='btn btn-primary'>Go to event</a> </div> </div>";
+            s += "<div class='card border rounded my-5 text-left'> <div class='card-header'> " + ev.name + "</div> <div class='card-body'> <h5 class='card-title'>" + ev.local_date + "</h5> <p class='card-text'>" + ev.description + "</p> <a target='_blank' href='" + ev.link + "' class='btn btn-primary'>Event details</a> </div> </div>";
         }
         $results.html(s);
     });
