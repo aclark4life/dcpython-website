@@ -8,7 +8,6 @@ function fetchGroups(url, cb, data) {
         method: 'get',
         url: url,
         success: function(result) {
-            console.log('got url:' + url);
             console.log('back with ' + result.data.length + ' results');
             console.dir(result);
             //add to data
