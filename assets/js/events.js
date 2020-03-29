@@ -34,7 +34,7 @@ $(document).ready(function() {
         var s = "";
         for (var i = 0; i < 3; i++) {
             var ev = res[i];
-            s += "<div class='card border my-5'><div class='card-header'><h2 class='card-title'>" + ev.name + "</h2></div><div class='card-body text-left'><p class='card-text'>" + ev.description + "</p></div> <a target='_blank' href='" + ev.link + "' class='btn btn-primary'>Go somewhere</a> </div> </div>";
+            s += "<div class='card border my-5'><h1 class='card-header'>" + ev.name + "</h1><div class='card-body text-left'><h5 class='card-title'>" + ev.description + "</h5></div> <a target='_blank' href='" + ev.link + "' class='btn btn-primary'>Go somewhere</a> </div> </div>";
         }
         $results.html(s);
 
