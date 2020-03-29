@@ -1,5 +1,5 @@
 // https://www.raymondcamden.com/2015/11/20/using-the-meetup-api-in-client-side-applications
-function fetchGroups(url, cb, data) {
+function fetchEvents(url, cb, data) {
     if (!data) data = [];
 
     $.ajax({
@@ -13,7 +13,7 @@ function fetchGroups(url, cb, data) {
             data.push.apply(data, result.data);
             if (result.meta.next_link) {
                 var nextUrl = result.meta.next_link;
-                fetchGroups(nextUrl, cb, data);
+                fetchEvents(nextUrl, cb, data);
             } else {
                 cb(data);
             }
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
     var $results = $("#events");
 
-    fetchGroups("https://api.meetup.com/dcpython/events?&sign=true&photo-host=public&page=20", function(res) {
+    fetchEvents("https://api.meetup.com/dcpython/events?&sign=true&photo-host=public&page=20", function(res) {
         // console.dir(res);
         var s = "";
         for (var i = 0; i < 3; i++) {
