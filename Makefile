@@ -332,5 +332,5 @@ vm: vagrant-init  # Alias
 #install: pip-install
 
 deploy:
-	aws --profile=dc s3 cp --recursive . s3://dcpython.org --exclude ".git/*" --exclude Makefile --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+	aws --profile=dc s3 cp --recursive . s3://dcpython.org --exclude "node_modules/*" --exclude ".git/*" --exclude Makefile --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 	aws --profile=dc cloudfront create-invalidation --distribution-id E315Y1FCSR1NT1 --paths "/*"
