@@ -1,2 +1,4 @@
-Ye Current Static Site
-======================
+Current Static Site
+===================
+
+.. image:: screenshot.png
