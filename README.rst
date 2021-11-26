@@ -1,4 +1,4 @@
-Current Static Site
-===================
+DC Python website
+=================
 
 .. image:: screenshot.png
