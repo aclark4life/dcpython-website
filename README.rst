@@ -1,4 +1,4 @@
-DC Python website
+Website
 =================
 
 .. image:: screenshot.png
