@@ -29,32 +29,30 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+include base.mk
 
 #
-#
-# Includes
-# ------------------------------------------------------------------------------ 
-#
-include base.mk
-#
-# Overrides
+# Overrides and includes
 # ------------------------------------------------------------------------------ 
 #
 # E.g.
 #
-# Uncomment next line to customize the default goal
-.DEFAULT_GOAL := commit-push
 #
-# Uncomment next line to customize the project name
+# Uncomment the next line to customize the project name variable
 #PROJECT_NAME := my_project
 #
-# Uncomment next line to customize the commit message
-#COMMIT_MESSAGE := Update
+# Uncomment the next line to customize the commit message variable
+#GIT_COMMIT := My awesome update
 #
-# Uncomment next two lines to add a "phony" target
-#.PHONY: serve
-#serve: django-serve-webpack
+# Uncomment the next two lines to customize the default edit target
+#edit:
+#	vi my_project.py
+#
+# Uncomment the next two lines to customize the default db-init target
+#db-init: my-init
 
-deploy:
-	aws --profile=dc s3 cp --recursive . s3://dcpython.org --exclude "node_modules/*" --exclude ".git/*" --exclude Makefile --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
-	aws --profile=dc cloudfront create-invalidation --distribution-id E315Y1FCSR1NT1 --paths "/*"
+# Uncomment the next line to include additional makefiles
+include dcpython.mk
+#
+# Uncomment the next line to customize the default goal
+.DEFAULT_GOAL := git-commit-push
