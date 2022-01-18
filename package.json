@@ -1,0 +1,22 @@
+{
+  "name": "dcpython",
+  "version": "1.0.0",
+  "description": "Website =================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcpython/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcpython/website/issues"
+  },
+  "homepage": "https://github.com/dcpython/website#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
