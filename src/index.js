@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
 
 // https://stackoverflow.com/a/53580347/185820
 // import '@fortawesome/fontawesome-free/js/fontawesome'
