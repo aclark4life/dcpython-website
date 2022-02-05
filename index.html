@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +18,30 @@
     </title>
 
     
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+      <link href="../assets/css/toolkit-minimal.css" rel="stylesheet">
+      <link href="../assets/css/application-minimal.css" rel="stylesheet">
+    
+
+    
+
     <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      /* …curses ios, etc… */
+      @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+          width: 1px;
+          min-width: 100%;
+          *width: 100%;
+        }
+        #stage {
+          height: 1px;
+          overflow: auto;
+          min-height: 100vh;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
     </style>
   </head>
 
@@ -28,7 +54,7 @@
 <div class="container pt-4">
   <nav class="navbar navbar-light navbar-expand-sm text-uppercase app-navbar mb-5">
     <a class="navbar-brand mr-auto" href="../">
-      <span>DC Python</span>
+      <span>Mochi</span>
     </a>
     <button
       class="navbar-toggler"
@@ -62,16 +88,16 @@
 
 <div class="block app-block-intro">
   <div class="container text-xs-center">
-    <h1 class="block-title mb-0 text-uppercase app-myphone-brand">DC Python</h1>
-    <p class="lead mb-5 pb-5">Scientific and educational 501(c)(3) organization in Maryland supporting the Python software developer community in DC and worldwide.</p>
-    <img class="img-thumbnail" src="../assets/img/iphone-to-iphone-sized.jpg">
+    <h1 class="block-title mb-0 text-uppercase app-myphone-brand">Mochi</h1>
+    <p class="lead mb-5 pb-5">Task management and a calendar for all</p>
+    <img src="../assets/img/iphone-to-iphone-sized.jpg">
   </div>
 </div>
 
 <div class="block block-bordered-lg">
   <div class="container text-center app-translate-15" data-transition="entrance">
     <blockquote class="pull-quote">
-      <img class="img-thumbnail rounded-circle" src="../assets/img/avatar-mdo.png">
+      <img class="rounded-circle" src="../assets/img/avatar-mdo.png">
       <p>
         “Task management. Calendars. Email. They all have one thing in common&hellip;literally no one enjoys managing them. Thanks to years of research, we can now predict every single thing you'll ever have to do or go to. Yeah, we're that good.”
       </p>
@@ -86,7 +112,7 @@
       <div class="col-lg-7 col-md-6">
         <img
           src="../assets/img/iphone-perspective-sized.jpg"
-          class="app-translate-5 img-thumbnail"
+          class="app-translate-5"
           data-transition="entrance">
         <hr class="mt-0 mb-5 mx-auto d-md-none">
       </div>
@@ -219,7 +245,7 @@
                 </p>
               </div>
             </div>
-            <img class="img-thumbnail mt-5 app-block-game-img d-block img-fluid" src="../assets/img/iphone-flat-sized.jpg">
+            <img class="img-fluid mt-5 app-block-game-img d-block img-fluid" src="../assets/img/iphone-flat-sized.jpg">
           </div>
         </div>
       </div>
@@ -233,7 +259,7 @@
                 </p>
               </div>
             </div>
-            <img class="img-thumbnail mt-5 app-block-game-img d-block img-fluid" src="../assets/img/iphone-flat-sized.jpg">
+            <img class="img-fluid mt-5 app-block-game-img d-block img-fluid" src="../assets/img/iphone-flat-sized.jpg">
           </div>
         </div>
       </div>
@@ -281,7 +307,7 @@
     </div>
   </div>
   <div class="text-right app-block-design-img">
-    <img src="../assets/img/iphone-reverse-perspective-sized.jpg" class="app-translate-50 img-thumbnail" data-transition="entrance">
+    <img src="../assets/img/iphone-reverse-perspective-sized.jpg" class="app-translate-50" data-transition="entrance">
   </div>
 </div>
 
@@ -340,8 +366,15 @@
   </div>
 </div>
 
-    <script src="dist/bundle.js"></script>
 
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/toolkit.js"></script>
+    <script src="../assets/js/application.js"></script>
+    <script>
+      // execute/clear BS loaders for docs
+      $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
+    </script>
 </body>
 </html>
 
