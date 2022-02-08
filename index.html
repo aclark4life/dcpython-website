@@ -14,39 +14,13 @@
       
     </title>
 
-    
-      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
-      <link href="../assets/css/toolkit-minimal.css" rel="stylesheet">
-      <link href="../assets/css/application-minimal.css" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="../assets/css/toolkit-minimal.css" rel="stylesheet">
+    <link href="../assets/css/application-minimal.css" rel="stylesheet">
 
-    
-
-    <style>
-      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
-      /* this chunk of css is not part of the toolkit :) */
-      /* …curses ios, etc… */
-      @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
-        body {
-          width: 1px;
-          min-width: 100%;
-          *width: 100%;
-        }
-        #stage {
-          height: 1px;
-          overflow: auto;
-          min-height: 100vh;
-          -webkit-overflow-scrolling: touch;
-        }
-      }
-    </style>
   </head>
 
-
 <body>
-  
-
-
 
 <div class="container pt-4">
   <nav class="navbar fixed-top bg-dark navbar-dark navbar-expand-sm text-uppercase app-navbar mb-5">
@@ -88,19 +62,48 @@
         <li class="nav-item">
           <a class="nav-link" target="_blank" href="https://www.youtube.com/channel/UCsHVO4jh008dSoLhH9HsVhA"><i class="fab fa-youtube fa-2x text-info"></i></a>
         </li>
-
-
-
       </ul>
     </div><!--/.nav-collapse -->
 </nav>
 </div>
 
-<div class="block app-block-intro mt-5">
+<div class="block">
   <div class="container text-xs-center">
     <h1 class="block-title mb-0 text-uppercase app-myphone-brand">DC Python</h1>
-    <p class="lead mb-5 pb-5">Scientific & educational 501(c)(3) organization in Maryland supporting the Python software developer community in DC and worldwide.</p>
-    <img src="../assets/img/iphone-to-iphone-sized.jpg">
+    <p class="lead">Scientific & educational 501(c)(3) organization in Maryland supporting the Python software developer community in DC and worldwide.</p>
+    <div id="carousel-top" class="carousel carousel-light slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <div class="block">
+            <div class="container text-center">
+              <img class="img-thumbnail" src="../assets/img/highres_487989184.jpeg">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="block">
+            <div class="container text-center">
+              <img class="img-thumbnail" src="../assets/img/highres_485191131.jpeg">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="block">
+            <div class="container text-center">
+              <img class="img-thumbnail" src="../assets/img/highres_484392458.jpeg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel-top" role="button" data-slide="prev">
+        <h1 class="icon icon-chevron-thin-left" aria-hidden="true"></h1>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-top" role="button" data-slide="next">
+        <h1 class="icon icon-chevron-thin-right" aria-hidden="true"></h1>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -112,12 +115,9 @@
   </div>
 </div>
 
-
-
 <div class="block block-bordered-lg" id="donate">
   <h1 class="text-center text-uppercase">Donate</h1>
   <div class="container-fluid">
-
     <div class="row justify-content-center">
       <div class="col-sm-8">
         <p class="lead mx-auto text-center">Your tax-deductible contribution enables us to provide the valuable services the Python community relies on including the <a target="_blank" href="https://meetup.com/dcpython">DC Python Meetup</a>, monthly meetings, developer sprints, educational events, special speakers, technical talks, and more. Thank you for the generosity that allows us to continue our outreach and the promotion of Python, open source software.</p>
@@ -360,68 +360,6 @@
     </div>
   </div>
 </div>
-
-<!--
-<div class="block block-bordered-lg">
-  <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-sm-8 text-center mb-5">
-      <p class="lead mx-auto">With over <strong>20 years of collective experience</strong>, we take the unthinkable and make it just a couple quick taps away.</p>
-    </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <ul class="featured-list">
-          <li class="mb-5">
-            <div class="featured-list-icon text-primary">
-              <span class="icon icon-image"></span>
-            </div>
-            <p class="featured-list-icon-text mb-0"><strong>Upload unlimited images</strong></p>
-            <p class="featured-list-icon-text">
-              We process all the images you upload and take full advantage of modern cloud based storage to host them at blazing fast speeds.
-            </p>
-          </li>
-
-          <li class="mb-5">
-            <div class="featured-list-icon text-primary">
-              <span class="icon icon-hour-glass"></span>
-            </div>
-            <p class="featured-list-icon-text mb-0"><strong>Tracked time savings</strong></p>
-            <p class="featured-list-icon-text">
-              This means you save tons of time by using our world class task manager and calendar and constantly reminds you how great it is.
-            </p>
-          </li>
-
-        </ul>
-      </div>
-      <div class="col-sm-6">
-        <ul class="featured-list">
-
-          <li class="mb-5">
-            <div class="featured-list-icon text-primary">
-              <span class="icon icon-cloud"></span>
-            </div>
-            <p class="featured-list-icon-text mb-0"><strong>Share from anywhere</strong></p>
-            <p class="featured-list-icon-text">
-              Do it over the cloud, from anywhere, on any device. Mochi is super fast and always available, to not only you, but all your friends
-            </p>
-          </li>
-
-          <li class="mb-5">
-            <div class="featured-list-icon text-primary">
-              <span class="icon icon-emoji-neutral"></span>
-            </div>
-            <p class="featured-list-icon-text mb-0"><strong>Use stickers and express yourself</strong></p>
-            <p class="featured-list-icon-text">
-              Share with emoji anyone in the world. We've baked them directly into Mochi. These probably won't help with productivity though.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
--->
 
 <div class="block block-bordered-lg pl-0 pt-0 pr-0">
   <div id="carousel-example-generic" class="carousel carousel-light slide" data-ride="carousel">
