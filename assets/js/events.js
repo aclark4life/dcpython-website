@@ -1,4 +1,3 @@
-
 // https://www.raymondcamden.com/2015/11/20/using-the-meetup-api-in-client-side-applications
 
 function fetchEvents(url, cb, data) {
