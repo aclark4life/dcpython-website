@@ -1,3 +1,5 @@
+PROJECT_NAME := dcpython-website
+
 deploy-prod:
 	aws --profile=dc s3 cp --recursive --exclude "lib/*" --exclude "bin/*" . s3://dcpython.org --exclude "node_modules/*" --exclude ".git/*" --exclude Makefile --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 
