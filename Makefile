@@ -4512,11 +4512,20 @@ ce-default: git-commit-edit git-push
 .PHONY: clean-default
 clean-default: wagtail-clean
 
+.PHONY: cp-default
+cp-default: git-commit-message git-push
+
 .PHONY: db-dump-default
 db-dump-default: eb-export
 
 .PHONY: dbshell-default
 dbshell-default: django-db-shell
+
+.PHONY: deploy-default
+deploy-default: eb-deploy
+
+.PHONY: d-default
+d-default: eb-deploy
 
 .PHONY: deps-default
 deps-default: pip-deps
@@ -4616,6 +4625,9 @@ shell-default: django-shell
 
 .PHONY: serve-default
 serve-default: django-serve
+
+.PHONY: static-default
+static-default: django-static
 
 .PHONY: sort-default
 sort-default: git-commit-message-sort git-push
